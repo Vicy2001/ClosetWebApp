@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings – Theme</title>
+  <script>
+    // Apply saved theme ASAP to avoid FOUC
+    (function(){
+      try {
+        var saved = localStorage.getItem('theme') || '';
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="Stylesheets/settings.css">
+  <link rel="stylesheet" href="Stylesheets/style.css">
+</head>
+<body>
+    <a href="index.html">
+        <button class="backButton" id="backButton">
+        go back
+        </button>
+    </a>
+
+  <main class="hero-section">
+    <div class="hero-text">
+      <h1 class="hero-header">Display Colors</h1>
+      <label for="themeSelect">Choose a theme:</label>
+      <select id="themeSelect">
+        <option value="">Standard</option>
+        <option value="rose">Rose</option>
+        <option value="lilac">Lilac</option>
+        <option value="latte">Latte</option>
+        <option value="mauve">Mauve</option>
+        <option value="plum">Plum</option>
+      </select>
+    </div>
+  </main>
+
+</body>
+  <script src="settings.js"></script>
+</body>
+</html>

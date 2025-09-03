@@ -1,0 +1,104 @@
+/* ===== Base CSS Variables + Theme Overrides ===== */
+/* We support BOTH naming schemes so old rules keep working. */
+:root {
+  /* Default (Standard) theme */
+   --background: #FAF9F6;
+  --primary-buttons: #E8DED1;
+  --primary-text: #4A3F35;
+  --secondary-text: #6E6257;
+  --primary-hover: #CBBFAE;
+  --links: #A67B5B;
+}
+
+/* Rose */
+:root[data-theme="rose"] {
+  --bg: #FFF9F7;
+  --surface: #EECAD3;
+  --text: #48333A;
+  --text-2: #6B4A54;
+  --hover: #3B292F;
+  --accent: #D57C9A;
+
+  --background: var(--bg);
+  --primary-buttons: var(--surface);
+  --primary-text: var(--text);
+  --secondary-text: var(--text-2);
+  --primary-hover: var(--hover);
+  --links: var(--accent);
+}
+
+/* Lilac */
+:root[data-theme="lilac"] {
+  --bg: #FAF7FF;
+  --surface: #E2D6FF;
+  --text: #3F2A56;
+  --text-2: #5A3E7A;
+  --hover: #2E2140;
+  --accent: #C79BFF;
+
+  --background: var(--bg);
+  --primary-buttons: var(--surface);
+  --primary-text: var(--text);
+  --secondary-text: var(--text-2);
+  --primary-hover: var(--hover);
+  --links: var(--accent);
+}
+
+/* Latte (neutral) */
+:root[data-theme="latte"] {
+  --bg: #FFF6F1;
+  --surface: #F1D8C9;
+  --text: #4A3A33;
+  --text-2: #6B554D;
+  --hover: #3B2E29;
+  --accent: #D58F7C;
+
+  --background: var(--bg);
+  --primary-buttons: var(--surface);
+  --primary-text: var(--text);
+  --secondary-text: var(--text-2);
+  --primary-hover: var(--hover);
+  --links: var(--accent);
+}
+
+/* Mauve */
+:root[data-theme="mauve"] {
+  --bg: #FFF6F1;
+  --surface: #F6C2C8;
+  --text: #6A2E35;
+  --text-2: #8C4750;
+  --hover: #5A2329;
+  --accent: #FF7DA6;
+
+  --background: var(--bg);
+  --primary-buttons: var(--surface);
+  --primary-text: var(--text);
+  --secondary-text: var(--text-2);
+  --primary-hover: var(--hover);
+  --links: var(--accent);
+}
+
+/* Plum */
+:root[data-theme="plum"] {
+  --bg: #FFF1F7;
+  --surface: #F7CDE1;
+  --text: #6E184F;
+  --text-2: #8F2C67;
+  --hover: #59123F;
+  --accent: #E85DAA;
+
+  --background: var(--bg);
+  --primary-buttons: var(--surface);
+  --primary-text: var(--text);
+  --secondary-text: var(--text-2);
+  --primary-hover: var(--hover);
+  --links: var(--accent);
+}
+
+/* ===== Import component styles last ===== */
+
+
+@import url("index.css");
+@import url("login.css");
+@import url("clothes.css");
+@import url("outfits.css");
