@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Closet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Stylesheets/clothes.css">
+  <link rel="stylesheet" href="Stylesheets/style.css">
+  <script>
+    (function(){
+      try {
+        var saved = localStorage.getItem('theme') || '';
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<header class="border">
+  <div class="container">
+    <!-- Logo + Text -->
+    <a class="home" href="index.html"  style="text-decoration:none">
+      <img src="Icons/logo.png" alt="Logo" height="50">
+      <span class="hero-text">My Closet</span>
+    </a>
+
+    <!-- Buttons rechts -->
+    <div class="nav-actions">
+      <a href="Profile/LogIn.html">
+        <button class="login">👤 log in</button>
+      </a>
+      <a href="Profile/SignIn.html">
+        <button class="signin">👋 sign in</button>
+      </a>
+      <a href="settings.html">
+        <button class="settings">⚙️ settings</button>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="addClothes">
+    <a href="addClothes.html">
+        <button class="buttonAddClothes">
+            <img src="Icons/Plus.png">
+            add
+        </button>
+    </a>
+</main>
+
+<main class="clothesFeed">
+
+</main>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <span class="text-body">Vicy 2025</span>
+    <div class="links"">
+      <a href="#" class="socialmedia">Instagram</a>
+      <a href="#" class="socialmedia">TikTok</a>
+
+    </div>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+<script src="header.js"></script>
+</body>
+</html>

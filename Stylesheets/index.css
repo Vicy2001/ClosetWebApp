@@ -130,7 +130,6 @@ header .container{
     flex-direction: column;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.15s ease, background-color 0.2s ease;
 }
 
 .clothesButton img {
@@ -142,7 +141,6 @@ header .container{
 .clothesButton:hover {
     background-color: var(--primary-hover);
     color: #ffffff;
-    transform: translateY(-2px);
 }
 
 .clothesButton:hover img {
@@ -169,7 +167,6 @@ header .container{
     flex-direction: column;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.15s ease, background-color 0.2s ease;
 }
 
 .closetButton img {
@@ -181,7 +178,6 @@ header .container{
 .closetButton:hover {
     background-color: var(--primary-hover);
     color: #ffffff;
-    transform: translateY(-2px);
 }
 
 .closetButton:hover img {

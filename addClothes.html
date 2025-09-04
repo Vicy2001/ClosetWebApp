@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Closet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Stylesheets/addclothes.css">
+  <link rel="stylesheet" href="Stylesheets/style.css">
+  <script>
+    (function(){
+      try {
+        var saved = localStorage.getItem('theme') || '';
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<header class="border">
+  <div class="container">
+    <!-- Logo + Text -->
+    <a class="home" href="index.html"  style="text-decoration:none">
+      <img src="Icons/logo.png" alt="Logo" height="50">
+      <span class="hero-text">My Closet</span>
+    </a>
+
+    <!-- Buttons rechts -->
+    <div class="nav-actions">
+      <a href="Profile/LogIn.html">
+        <button class="login">👤 log in</button>
+      </a>
+      <a href="Profile/SignIn.html">
+        <button class="signin">👋 sign in</button>
+      </a>
+      <a href="settings.html">
+        <button class="settings">⚙️ settings</button>
+      </a>
+    </div>
+  </div>
+</header>
+
+    <a href="clothes.html">
+        <button class="backButton">
+            back
+        </button>
+    </a>
+
+    <br>
+    <br>
+    <br>
+
+<div class="viewWindow">
+    <div class="imageUpload form-card">
+    <input type="file" id="photo" accept="image/*" hidden>
+    <label for="photo" class="uploadLabel">📷 Upload photo</label>
+    <img id="photoPreview" alt="Preview" class="preview" />
+</div>
+
+  <div class="category form-card">
+    <h3>Category</h3>
+    <div class="option-list">
+      <label><input type="checkbox" name="category" value="shirt"> Shirt</label>
+      <label><input type="checkbox" name="category" value="top"> Top</label>
+      <label><input type="checkbox" name="category" value="blouse"> Blouse</label>
+      <label><input type="checkbox" name="category" value="pants"> Pants</label>
+      <label><input type="checkbox" name="category" value="jeans"> Jeans</label>
+      <label><input type="checkbox" name="category" value="skirt"> Skirt</label>
+      <label><input type="checkbox" name="category" value="dress"> Dress</label>
+      <label><input type="checkbox" name="category" value="cardigan"> Cardigan</label>
+      <label><input type="checkbox" name="category" value="coat"> Coat</label>
+      <label><input type="checkbox" name="category" value="shoes"> Shoes</label>
+
+    </div>
+  </div>
+
+  <div class="color form-card">
+    <h3>Color</h3>
+    <div class="option-list">
+      <label><input type="checkbox" name="color" value="white"> White</label>
+      <label><input type="checkbox" name="color" value="black"> Black</label>
+      <label><input type="checkbox" name="color" value="pink"> Pink</label>
+      <label><input type="checkbox" name="color" value="blue"> Blue</label>
+      <label><input type="checkbox" name="color" value="green"> Green</label>
+      <label><input type="checkbox" name="color" value="yellow"> Yellow</label>
+      <label><input type="checkbox" name="color" value="red"> Red</label>
+      <label><input type="checkbox" name="color" value="violet"> Violet</label>
+      <label><input type="checkbox" name="color" value="brown"> Brown</label>
+      <label><input type="checkbox" name="color" value="beige"> Beige</label>
+
+
+    </div>
+  </div>
+
+  <div class="seasons form-card">
+    <h3>Season</h3>
+    <div class="option-list">
+      <label><input type="checkbox" name="season" value="spring"> Spring</label>
+      <label><input type="checkbox" name="season" value="summer"> Summer</label>
+      <label><input type="checkbox" name="season" value="fall"> Fall</label>
+      <label><input type="checkbox" name="season" value="winter"> Winter</label>
+    </div>
+  </div>
+
+  <div class="description form-card">
+    <h3>Description</h3>
+    <textarea name="subject" id="mailText" placeholder="Notes, brand, size..."></textarea>
+  </div>
+
+  <div class="save">
+    <button class="saveButton">save</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var input = document.getElementById('photo');
+  var preview = document.getElementById('photoPreview');
+  if (input && preview) {
+    input.addEventListener('change', function(){
+      var file = input.files && input.files[0];
+      if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = 'block';
+      }
+    });
+  }
+})();
+</script>
+
+<!-- Footer -->
+<footer class="footer">
+
+</footer>
+
+<script src="index.js"></script>
+<script src="header.js"></script>
+</body>
+</html>

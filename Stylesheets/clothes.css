@@ -1,0 +1,144 @@
+body{
+    height: 100%;
+    background-color: var(--background);
+
+}
+
+
+
+/* Header layout: brand left, actions right */
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Actions group at top-right */
+.nav-actions{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px; /* spacing between buttons */
+    margin-left: auto; /* push to right */
+}
+
+/* Ensure anchor wrappers don't add gaps/lines */
+.nav-actions a{ text-decoration: none; display:inline-flex; }
+
+
+.login {
+    margin: 5px;
+    padding: 15px;
+    max-width: 150px;
+    border-radius: 8px;
+    background-color: var(--primary-buttons);
+    background-image: none;
+    color: var(--primary-text);
+    font-size: 14px;
+    font-weight: bold;
+    border-color: transparent;
+}
+
+.login:hover {
+    background-color: var(--primary-hover);
+    color: #ffffff;
+}
+
+
+.signin {
+    margin: 5px;
+    padding: 15px;
+    max-width: 150px;
+    border-radius: 8px;
+    background-color: var(--primary-buttons);
+    background-image: none;
+    color: var(--primary-text);
+    font-size: 14px;
+    font-weight: bold;
+    border-color: transparent;
+}
+
+.signin:hover {
+    background-color: var(--primary-hover);
+    color: #ffffff;
+}
+
+
+.settings {
+    margin: 5px;
+    padding: 15px;
+    max-width: 150px;
+    border-radius: 8px;
+    background-color: var(--primary-buttons);
+    background-image: none;
+    color: var(--primary-text);
+    font-size: 14px;
+    font-weight: bold;
+    border-color: transparent;
+}
+
+.settings:hover {
+    background-color: var(--primary-hover);
+    color: #ffffff;
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    gap: 20px; /* spacing between buttons */
+    margin-top: 2rem;
+}
+
+.buttonAddClothes {
+    margin: 5px;
+    padding: 15px;
+    max-width: 150px;
+    border-radius: 8px;
+    background-color: var(--primary-buttons);
+    background-image: none;
+    color: var(--primary-text);
+    font-size: 14px;
+    font-weight: bold;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.buttonAddClothes img {
+    background-color: var(--primary-buttons);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.buttonAddClothes:hover {
+    background-color: var(--primary-hover);
+    color: #ffffff;
+}
+
+.buttonAddClothes:hover img {
+    background-color: var(--primary-hover);
+}
+
+
+
+/* Begrenzung für Fließtext */
+.hero-text {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Bildgröße und responsives Verhalten */
+.hero-image {
+    max-height: 40vh;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: 2rem auto 1rem auto;
+}
